@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+// "homepage": "https://angelinaivanova16.github.io/redux-counter/"
