@@ -13,11 +13,15 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case "plus":
-      state.count = state.count + 1;
-      return state;
+      return {
+      ...state,
+       count: state.count + 1
+      }
     case "minus":
-      state.count = state.count - 1;
-      return state;
+      return {
+        ...state,
+         count: state.count - 1
+        }
     default:
       return state;
   }
@@ -29,7 +33,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App defaultState={defaultState} />
+      <App />
     </Provider>
   </React.StrictMode>
 );
